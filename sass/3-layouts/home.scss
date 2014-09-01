@@ -1,0 +1,168 @@
+header{
+  padding: 3em 1em;
+  @include outer-container;
+  .headertitle{
+    @include span-columns(9);
+    img{
+      float:left;
+      max-width: 180px;
+      border: 1px solid #333;
+      padding: 0.4em;
+      margin-right: 2em;
+      display: block;
+      @media (max-width: 68em){
+        display: block;
+        margin-right: 2em;
+      }
+      @media (max-width: 33.750em){
+        @include span-columns(12);
+        display: block;
+        max-width: 100%;
+      }
+    }
+    hgroup{
+      margin-top: 3em;
+      @media (max-width: 33.750em){
+        @include span-columns(12);
+        text-align: center;
+      }
+    }
+    @media (max-width: 68em){
+      @include span-columns(7);
+      padding: 0em 1em;
+      margin: 0 auto;
+      margin-bottom: 3em;
+      font-size: 60%;
+    }
+    @media (max-width: 56.250em){
+       @include span-columns(12);
+       // font-size: 30%;
+       margin-bottom: 2em;
+       h1{
+        font-size: 4em;
+       }
+       h2{
+        font-size: 2.6em;
+       }
+    }
+  }
+  .contactinfo{
+    @include span-columns(3);
+    .socialicons{
+      margin-bottom: 2em;
+      i{
+        background: #333;
+        color: #f9f8f6;
+        padding: .3em;
+        margin-right: .2em;
+        &:hover{
+          background: $red;
+        }
+      }
+    }
+    .personalinfo{
+      li{
+        margin-bottom: .3em;
+      }
+      a{
+        color: #333;
+        &:hover{
+          border-bottom: 1px solid #333;
+          color: $teal;
+        }
+      }
+    }
+    @media (max-width: 68em){
+      padding: 0em 1em;
+      // width:100%;
+      text-align: center;
+      @include span-columns(5);
+    }
+    @media (max-width: 56.250em){
+       @include span-columns(12);
+    }
+  }
+  @media (max-width: 33.750em){
+    padding: 1em;
+  }
+}
+
+section{
+  padding: 2em 1em;
+  @include outer-container;
+  aside{
+    @include span-columns(3);
+    @media (max-width: 56.250em){
+       @include span-columns(12);
+       margin-bottom: 2em;
+    }
+  }
+  article{
+    @include span-columns(9);
+    @media (max-width: 56.250em){
+       @include span-columns(12);
+    }
+    hr{
+      padding-top: 1.5em;
+      margin-bottom: 3.5em;
+    }
+    .job{
+      @include clearfix;
+    }
+    hgroup{
+      @include span-columns(9);
+      @media (max-width: 41.875em){
+        @include span-columns(12);
+      }
+    }
+    .dates{
+      @include span-columns(3);
+      background: $red;
+      text-align: center;
+      padding-top: 10px;
+      color: $body;
+      @media (max-width: 41.875em){
+        @include span-columns(12);
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+
+.piechartcontainer{
+  @include span-columns(12);
+  .piechart{
+    @include span-columns(4);
+    text-align: center;
+  }
+}
+
+
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percent {
+  display: inline-block;
+  line-height: 150px;
+  z-index: 2;
+  font-family:"news-gothic-std";
+  font-weight: 300;
+  font-size: 1.3em;
+}
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}

@@ -1,0 +1,24 @@
+body{
+  background: #f9f8f6;
+}
+
+#bgcolor, #bgcolorfooter{
+  background: $blue;
+}
+
+#bgcolor{
+  height: .6em;
+  width: 100%;
+}
+
+#bgcolorfooter{
+  height: 7em;
+}
+
+hr{
+  @include outer-container;
+  @media (max-width: 33.750em){
+    max-width: 90%;
+  }
+}
+

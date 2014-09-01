@@ -1,0 +1,14 @@
+$base-spacing: 1em;
+
+.footer {
+  @include outer-container;
+  $footer-color: #333;
+  padding: $base-spacing*2 $gutter;
+  width: 100%;
+  p {
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: auto;
+    text-align: center;
+  }
+}
