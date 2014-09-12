@@ -88,7 +88,7 @@ header{
 }
 
 section{
-  padding: 2em 1em;
+  padding: 2em;
   @include outer-container;
   aside{
     @include span-columns(3);
@@ -101,6 +101,16 @@ section{
     @include span-columns(9);
     @media (max-width: 56.250em){
        @include span-columns(12);
+    }
+    ul{
+      list-style-type: disc;
+      margin:1.5em 0;
+      li{
+        list-style-position: inside;
+        text-indent: -1em;
+        margin-left: 1em;
+        margin-bottom:1em;
+      }
     }
     hr{
       padding-top: 1.5em;
